@@ -2,11 +2,9 @@ import { Card, Select, Button, Popconfirm } from "antd";
 import TodoServices from "@/services/TodoServices";
 import useBaseHandler from "@/hooks/useBaseHandler";
 
-const { updateTodo, deleteTodo } = TodoServices;
-
 export default function TodoItem({ todo, refresh }) {
 
-  const {  deleteTodo } = useBaseHandler();
+  const {  deleteTodo, updateTodo } = useBaseHandler();
 
   const changeStatus = async (status, id) => {
     await updateTodo(id, { status });
