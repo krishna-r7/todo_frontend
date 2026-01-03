@@ -1,0 +1,140 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+    font-family: 'Poppins', sans-serif;
+  }
+
+  * {
+    font-family: 'Poppins', sans-serif !important; /* Optional reinforcement */
+  }
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-rgb: 255, 255, 255;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-rgb));
+}
+
+/* Ant Design Overrides */
+.ant-btn-primary {
+  background-color: #14b8a6;
+}
+
+.ant-btn-primary:hover {
+  background-color: #0d9488 !important;
+}
+
+.ant-radio-button-wrapper-checked {
+  background-color: #14b8a6 !important;
+  border-color: #14b8a6 !important;
+  color: white !important;
+}
+
+.ant-radio-button-wrapper-checked::before {
+  background-color: #14b8a6 !important;
+}
+
+.ant-radio-button-wrapper:hover {
+  color: #14b8a6;
+}
+
+.ant-menu-item-selected {
+  background-color: #e6fffa !important;
+  color: #14b8a6 !important;
+}
+
+.ant-menu-item:hover {
+  color: #14b8a6 !important;
+}
+
+.ant-menu-item-selected::after {
+  border-right-color: #14b8a6 !important;
+}
+
+
+.custom-upload .ant-upload.ant-upload-select-picture-card {
+  width: 150px !important;
+  height: 150px !important;
+  margin: 0;
+}
+.custom-upload .ant-upload.ant-upload-select-picture-card > .ant-upload {
+  width: 100% !important;
+  height: 100% !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* Main pill look */
+.pill-select {
+  width: 100px;                  /* adjust width */
+  border-radius: 9999px;        /* pill shape */
+  background-color: #f5f6ff;    /* light bluish background */
+  text-align: center;
+  padding: 2px 4px;
+}
+
+/* Remove AntD default border & box */
+.pill-select .ant-select-selector {
+  border: none !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  text-align: center;
+}
+
+/* Text styling */
+.pill-select .ant-select-selection-item {
+  color: #3b82f6;   /* blue text */
+  font-weight: 500;
+  text-align: center;
+  width: 100%;
+}
+
+/* Arrow styling */
+.pill-select .ant-select-arrow {
+  color: #111 !important;
+  font-size: 12px;
+}
+
+.ant-table-thead th,
+.ant-table-tbody td {
+  text-align: center !important;
+}
+
+
+/* uploader.css */
+.uploader-item {
+  width: 100px; /* same as previewWidth */
+  height: 95px; /* same as previewHeight */
+  transition: all 0.2s ease-in-out;
+}
+
+
+/* uploader.css */
+.uploader-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.uploader-item {
+  width: 100px;   /* same as previewWidth */
+  height: 95px;   /* same as previewHeight */
+  flex-shrink: 0; /* 🚀 prevent shrinking */
+  position: relative;
+  transition: opacity 0.2s ease;
+}
+
+.uploader-item.removing {
+  opacity: 0; /* fade instead of glitchy resize */
+}
+
+
+
+/* login */
